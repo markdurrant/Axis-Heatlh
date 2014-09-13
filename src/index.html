@@ -4,13 +4,58 @@
   <meta charset="utf-8">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title></title> <!-- ADD A TITLE! -->
+  <title>Axis Heatlh | Tesco Health Hackathon</title> <!-- ADD A TITLE! -->
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900,100,100italic,300italic,400italic,500italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <img src="img/placeholder.png" style="position: fixed; top: 50%; left: 50%; margin: -200px;">
+  <header class="site-header">
+    <h1 class="site-title">Axis Heatlh</h1>
+    <h2 class="site-subtitle">- Tesco Health Hackathon</h2>
+  </header> <!-- end .site-header -->
+
+  <div class="wrap">
+
+    <div class="chart">
+      <div class="axis-container y-axis-container">
+        <div class="axis y-axis">
+          <span class="axis-item y-axis-item">10%</span>
+          <span class="axis-item y-axis-item">25%</span>
+          <span class="axis-item y-axis-item">50%</span>
+        </div>
+        <input type="range" min="1" max="3" value="1" class="axis-slider y-axis-slider" oninput="dotPos()">
+        <span class="axis-label y-axis-label">Portion Size</span>
+      </div> <!-- end .x-axis-container -->
+
+      <div class="axis-container x-axis-container">
+        <div class="axis x-axis">
+          <img src="img/img-01.svg" class="axis-item x-axis-item">
+          <img src="img/img-02.svg" class="axis-item x-axis-item">
+          <img src="img/img-03.svg" class="axis-item x-axis-item">
+          <img src="img/img-04.svg" class="axis-item x-axis-item">
+        </div>
+        <input type="range" min="1" max="4" value="1" class="axis-slider x-axis-slider" oninput="dotPos()">
+        <span class="axis-label x-axis-label">Ingredient Type</span>
+      </div> <!-- .y-axis-container -->
+
+      <div class="chart-inner">
+        <div class="dot y-pos-1 x-pos-1"></div>
+      </div>
+
+    </div> <!-- end .chart -->
+
+  </div> <!-- end .wrap -->
+
+
+<!--   <label for="fader">Volume</label>
+  <input type="range" min="0" max="100" value="50" id="fader" step="1" oninput="outputUpdate(value)">
+  <output for="fader" id="volume">50</output> -->
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script> window.jQuery || document.write( '<script src="vendor//jquery/jquery.min.js"><\/script>' )</script>

@@ -1,0 +1,152 @@
+//=======================================================
+// CHART
+//=======================================================
+.chart {
+  margin: 2rem;
+  width: $chart-width;
+  height: $chart-height;
+  position: relative;
+}
+
+.axis-container {
+  height: $axis-height;
+}
+
+.y-axis-container {
+  width: $chart-height - $axis-height;
+  transform: rotate( 90deg );
+  transform-origin: left top;
+  position: absolute;
+  left: $axis-height;
+}
+
+.x-axis-container {
+  position: absolute;
+  bottom: 0;
+  left: $axis-height;
+  width: $chart-width - $axis-height;
+}
+
+.axis {
+  border-top: 2px solid rgba( $ink, 0.75 );
+}
+
+.y-axis {
+
+}
+
+.x-axis {
+
+}
+
+.axis-item {
+  pointer-events: none;
+}
+
+.y-axis-item {
+  display: block;
+  text-align: center;
+  transform: rotate( -90deg );
+  position: absolute;
+  top: 10px;
+
+  &:nth-child(1) {
+    left: 26px;
+  }
+
+  &:nth-child(2) {
+    left: 185px;
+  }
+
+  &:nth-child(3) {
+    left: 344px;
+  }
+}
+
+.x-axis-item {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 5px;
+
+  &:nth-child(1) {
+    left: 21px;
+  }
+
+  &:nth-child(2) {
+    left: 228px;
+  }
+
+  &:nth-child(3) {
+    left: 434px;
+  }
+
+  &:nth-child(4) {
+    left: 640px;
+  }
+}
+
+.axis-label {
+
+}
+
+.y-axis-label {
+  transform: rotate( 180deg );
+  display: block;
+  position: absolute;
+  left: 160px;
+  top: 82px;
+}
+
+.x-axis-label {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.chart-inner {
+  width: $chart-width - $axis-height;
+  height: $chart-height - $axis-height;
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+
+.dot {
+  border: 2px solid $ink;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  transform: translate( -5px, -5px );
+}
+
+.y-pos-1 {
+  top: 36px;
+}
+
+.y-pos-2 {
+  top: 195px;
+}
+
+.y-pos-3 {
+  top: 354px;
+}
+
+.x-pos-1 {
+  left: 34px;
+}
+
+.x-pos-2 {
+  left: 241px;
+}
+
+.x-pos-3 {
+  left: 448px;
+}
+
+.x-pos-4 {
+  left: 656px;
+}

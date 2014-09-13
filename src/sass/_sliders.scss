@@ -1,0 +1,35 @@
+//=======================================================
+// SLIDERS
+//=======================================================
+$slider-margin: 20px;
+
+.axis-slider {
+  -webkit-appearance: none;
+  background-color: $ink;
+  height: 4px;
+  border-radius: 2px;
+  outline: 0;
+  cursor: pointer;
+  z-index: 999;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: $ink;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+  }
+}
+
+.x-axis-slider {
+  width: $chart-width - $axis-height - $slider-margin * 2;
+  margin-left: $slider-margin;
+  margin-top: 60px;
+}
+
+.y-axis-slider {
+  margin-top: 56px;
+  width: $chart-height - $axis-height - $slider-margin * 2;
+  margin-left: $slider-margin;
+}

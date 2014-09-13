@@ -1,0 +1,25 @@
+//=======================================================
+// SITE HEADER
+//=======================================================
+.site-header {
+  @include clearfix;
+
+  padding: 0 1rem;
+  border-bottom: 2px solid rgba( $ink, 0.75 );
+}
+
+.site-title,
+.site-subtitle {
+  float: left;
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+
+.site-title {
+
+}
+
+.site-subtitle {
+  font-weight: 100;
+  margin-left: 0.5rem;
+}
