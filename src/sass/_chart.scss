@@ -1,152 +1,85 @@
 //=======================================================
 // CHART
 //=======================================================
-.chart {
+.chart-container {
+  float: left;
   margin: 2rem;
   width: $chart-width;
   height: $chart-height;
   position: relative;
-}
-
-.axis-container {
-  height: $axis-height;
-}
-
-.y-axis-container {
-  width: $chart-height - $axis-height;
-  transform: rotate( 90deg );
-  transform-origin: left top;
-  position: absolute;
-  left: $axis-height;
-}
-
-.x-axis-container {
-  position: absolute;
-  bottom: 0;
-  left: $axis-height;
-  width: $chart-width - $axis-height;
-}
-
-.axis {
-  border-top: 2px solid rgba( $ink, 0.75 );
-}
-
-.y-axis {
-
-}
-
-.x-axis {
-
-}
-
-.axis-item {
-  pointer-events: none;
-}
-
-.y-axis-item {
-  display: block;
-  text-align: center;
-  transform: rotate( -90deg );
-  position: absolute;
-  top: 10px;
-
-  &:nth-child(1) {
-    left: 26px;
-  }
-
-  &:nth-child(2) {
-    left: 185px;
-  }
-
-  &:nth-child(3) {
-    left: 344px;
-  }
-}
-
-.x-axis-item {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 5px;
-
-  &:nth-child(1) {
-    left: 21px;
-  }
-
-  &:nth-child(2) {
-    left: 228px;
-  }
-
-  &:nth-child(3) {
-    left: 434px;
-  }
-
-  &:nth-child(4) {
-    left: 640px;
-  }
-}
-
-.axis-label {
-
-}
-
-.y-axis-label {
-  transform: rotate( 180deg );
-  display: block;
-  position: absolute;
-  left: 160px;
-  top: 82px;
-}
-
-.x-axis-label {
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-  padding-top: 10px;
+  top: 1rem;
 }
 
 .chart-inner {
-  width: $chart-width - $axis-height;
-  height: $chart-height - $axis-height;
+  width: $chart-width - $axis-height - $chart-inner-margin * 2;
+  height: $chart-height - $axis-height - $chart-inner-margin * 2;
   position: absolute;
-  top: 0;
-  left: 100px;
+  top: $chart-inner-margin;
+  left: $axis-height + $chart-inner-margin;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    width: 100.5%;
+    top: - $chart-inner-margin;
+    bottom: - $chart-inner-margin;
+    background-size: 33.3%;
+    background-image: linear-gradient( 90deg, rgba( $ink, 0.5 ) 1px, transparent 1px );
+  }
+
+  &::after {
+    height: 100%;
+    left: - $chart-inner-margin;
+    right: - $chart-inner-margin;
+    background-size: 33.3333%;
+    background-image: linear-gradient( rgba( $ink, 0.5 ) 1px, transparent 1px );
+  }
 }
 
 .dot {
-  border: 2px solid $ink;
-  width: 20px;
-  height: 20px;
+  background-color: $ink;
+  box-shadow: inset 0 0 0 3px $ink, inset 0 0 0 8px $paper;
+  width: $dot-size;
+  height: $dot-size;
   border-radius: 50%;
   position: absolute;
-  transition: all 0.2s ease-in-out;
-  transform: translate( -5px, -5px );
+  z-index: 999;
+  transition: all 0.1s ease-in-out;
+  transform: translate( -( $dot-size / 2 ), -( $dot-size / 2 ) );
 }
 
 .y-pos-1 {
-  top: 36px;
+  top: 0;
 }
 
 .y-pos-2 {
-  top: 195px;
+  top: 33.3336%;
 }
 
 .y-pos-3 {
-  top: 354px;
+  top: 66.6666%;
+}
+
+.y-pos-4 {
+  top: 100%;
 }
 
 .x-pos-1 {
-  left: 34px;
+  left: 0;
 }
 
 .x-pos-2 {
-  left: 241px;
+  left: 33.333%;
 }
 
 .x-pos-3 {
-  left: 448px;
+  left: 66.666%;
 }
 
 .x-pos-4 {
-  left: 656px;
+  left: 100%;
 }

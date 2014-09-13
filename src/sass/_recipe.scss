@@ -1,0 +1,46 @@
+//=======================================================
+// RECIPE
+//=======================================================
+.recipe-container {
+  float: left;
+  margin-left: 30px;
+  width: 300px;
+}
+
+.recipe-name {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.ingredients-list {
+
+}
+
+.ingredient {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+
+  &::before {
+    content: "\25cf";
+    font-size: 0.6rem;
+    position: relative;
+    top: -3px;
+  }
+}
+
+.ingredient-quantity {
+  font-weight: 500;
+}
+
+.ingredient-type {
+  font-weight: 500;
+  border-bottom: 2px solid $ink;
+}
+
+.gram::after {
+  content: "g";
+}
+
+.ml::after {
+  content: "ml";
+}

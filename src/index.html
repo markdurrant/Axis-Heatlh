@@ -22,15 +22,16 @@
 
   <div class="wrap">
 
-    <div class="chart">
+    <div class="chart-container">
       <div class="axis-container y-axis-container">
         <div class="axis y-axis">
+          <span class="axis-item y-axis-item">0%</span>
           <span class="axis-item y-axis-item">10%</span>
           <span class="axis-item y-axis-item">25%</span>
           <span class="axis-item y-axis-item">50%</span>
         </div>
-        <input type="range" min="1" max="3" value="1" class="axis-slider y-axis-slider" oninput="dotPos()">
-        <span class="axis-label y-axis-label">Portion Size</span>
+        <input type="range" min="1" max="4" value="1" class="axis-slider y-axis-slider" oninput="dotPos(), changeQuantity( value )">
+        <span class="axis-label y-axis-label">Portion Control</span>
       </div> <!-- end .x-axis-container -->
 
       <div class="axis-container x-axis-container">
@@ -40,15 +41,58 @@
           <img src="img/img-03.svg" class="axis-item x-axis-item">
           <img src="img/img-04.svg" class="axis-item x-axis-item">
         </div>
-        <input type="range" min="1" max="4" value="1" class="axis-slider x-axis-slider" oninput="dotPos()">
+        <input type="range" min="1" max="4" value="4" class="axis-slider x-axis-slider" oninput="dotPos(), changeIngredient( value )">
         <span class="axis-label x-axis-label">Ingredient Type</span>
       </div> <!-- .y-axis-container -->
 
       <div class="chart-inner">
-        <div class="dot y-pos-1 x-pos-1"></div>
-      </div>
+        <div class="dot y-pos-1 x-pos-4"></div>
+      </div> <!-- end .chart-inner -->
 
     </div> <!-- end .chart -->
+
+    <div class="recipe-container">
+      <h2 class="recipe-name">Lasagne</h2>
+      <ul class="ingredients-list">
+        <li class="ingredient">
+          <span class="ingredient-quantity">1 tbsp</span>
+          olive oil</li>
+        <li class="ingredient">
+          <span class="ingredient-quantity gram" data-quantity="250"></span>
+          <span class="ingredient-type"></span>
+        </li>
+        <li class="ingredient">
+          <span class="ingredient-quantity">1</span>
+          onion, diced</li>
+        <li class="ingredient">
+          <span class="ingredient-quantity">3 </span>
+          carrots</li>
+        <li class="ingredient">
+          <span class="ingredient-quantity gram" data-quantity="75"></span>
+          butter</li>
+        <li class="ingredient">
+          <span class="ingredient-quantity gram" data-quantity="75"></span>
+          plain flour</li>
+        <li class="ingredient">
+          <span class="ingredient-quantity">1 tsp</span>
+          English mustard</li>
+        <li class="ingredient">
+          <span class="ingredient-quantity ml" data-quantity="750"></span>
+          milk</li>
+        <li class="ingredient">
+          <span class="ingredient-quantity">2</span>
+          garlic cloves</li>
+        <li class="ingredient">
+          <span class="ingredient-quantity gram" data-quantity="800"></span>
+          tin tomatoes</li>
+        <li class="ingredient">
+          <span class="ingredient-quantity gram" data-quantity="250"></span>
+          lasagne sheets</li>
+        <li class="ingredient">
+          <span class="ingredient-quantity"></span>
+          salt and pepper</li>
+      </ul>
+    </div> <!-- end .recipe-container -->
 
   </div> <!-- end .wrap -->
 

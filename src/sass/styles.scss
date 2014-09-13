@@ -13,10 +13,19 @@
 $paper:  hsl( 145, 65, 50 );
 $ink:    white;
 
-$chart-width: 800px;
+$paper:  white;
+$ink:    white;
+
+$chart-width: 600px;
 $chart-height: 500px;
 
 $axis-height: 100px;
+
+$slider-margin: 20px;
+
+$chart-inner-margin: 40px;
+
+$dot-size: 30px;
 
 //=======================================================
 // BASCIS
@@ -38,13 +47,18 @@ body {
   color: $ink;
   font-family: "Roboto", sans-serif;
   line-height: 1.4;
-  font-weight: 100;
+  font-weight: 300;
+  width: 1024px;
 }
 
 h1, h2, h3, h4, h5, h6,
 b,
 strong {
-  font-weight: 400;
+  font-weight: 500;
+}
+
+.wrap {
+  @include clearfix;
 }
 
 //=======================================================
@@ -58,3 +72,9 @@ strong {
 
 // sliders styles
 @import "_sliders.scss";
+
+// axis styles
+@import "_axis.scss";
+
+// recipe styles
+@import "_recipe.scss";

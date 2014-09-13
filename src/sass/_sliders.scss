@@ -1,11 +1,9 @@
 //=======================================================
 // SLIDERS
 //=======================================================
-$slider-margin: 20px;
-
 .axis-slider {
   -webkit-appearance: none;
-  background-color: $ink;
+  background-color: mix( $ink, $paper, 75 );
   height: 4px;
   border-radius: 2px;
   outline: 0;
@@ -14,22 +12,23 @@ $slider-margin: 20px;
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: $ink;
+    background-color: mix( $ink, $paper );
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 0;
+    border: 4px solid $ink;
   }
 }
 
 .x-axis-slider {
   width: $chart-width - $axis-height - $slider-margin * 2;
   margin-left: $slider-margin;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .y-axis-slider {
-  margin-top: 56px;
+  margin-top: 62px;
   width: $chart-height - $axis-height - $slider-margin * 2;
   margin-left: $slider-margin;
 }
