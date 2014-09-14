@@ -5,11 +5,23 @@
   float: left;
   margin-left: 30px;
   width: 360px;
+
+  @media (max-width: 1025px) {
+    width: 300px;
+  }
 }
 
 .recipe-name {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+
+  &::after {
+    content: " - serves 3";
+    font-weight: 100;
+    font-size: 1.2rem;
+    position: relative;
+    top: -0.25rem;
+  }
 }
 
 .ingredients-list {
