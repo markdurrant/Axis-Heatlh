@@ -14,7 +14,9 @@ $paper:  hsl( 145, 65, 50 );
 $ink:    white;
 
 $paper:  white;
-$ink:    white;
+$ink:    #004996;
+
+$primary: #004996;
 
 $chart-width: 600px;
 $chart-height: 500px;
@@ -48,7 +50,6 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.4;
   font-weight: 300;
-  width: 1024px;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -59,6 +60,9 @@ strong {
 
 .wrap {
   @include clearfix;
+
+  width: 1024px;
+  margin: 0 auto;
 }
 
 //=======================================================
