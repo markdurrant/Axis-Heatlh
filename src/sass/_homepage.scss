@@ -22,14 +22,14 @@
   z-index: 999;
 
   // background: rgba( black, 0.35 );
-  height: 7rem;
+  height: 5rem;
   padding-right: 0.5rem;
   border-bottom: 2px solid $primary;
 }
 
-.homepage-header a {
+.homepage-header .nav {
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   float: right;
   color: $primary !important;
@@ -38,7 +38,7 @@
   border: 2px solid $primary;
   padding: 0.2rem 0.4rem;
   border-radius: 6px;
-  margin: 1.75rem 1rem;
+  margin: 1.25rem 0.5rem;
 
   &:hover {
     background-color: rgba( white, 0.1 );
@@ -46,12 +46,16 @@
 }
 
 .header-homepage-title {
-  color: $primary !important;
-  margin: 0.6rem 1rem;
+  margin: 0.3rem 1rem;
   float: left;
   font-weight: 100;
   letter-spacing: 1px;
-  font-size: 4rem;
+  font-size: 3rem;
+
+  a {
+    text-decoration: none;
+    color: $primary !important;
+  }
 }
 
 .homepage-title {
@@ -90,4 +94,21 @@
   width: 300px;
   bottom: 2rem;
   left: 2rem;
+}
+
+
+.tesco-logo-header {
+  height: 2.6rem;
+  margin: 1.3rem 0 0;
+}
+
+.pitch-content {
+  padding: 2rem 3rem;
+
+  li {
+    list-style: disc;
+    color: $primary;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
 }

@@ -1,0 +1,55 @@
+//=======================================================
+// SLIDES
+//=======================================================
+.homepage-bg,
+.app-container,
+.pitch-container {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: left 0.25s ease-in-out;
+}
+
+.homepage-bg {
+
+  &.open {
+    left: 0;
+  }
+
+  &.closed {
+    left: -100%;
+  }
+}
+
+.app-container {
+  background-color: white;
+
+  &.open {
+    left: 0;
+  }
+
+  &.ready {
+    left: 100%;
+  }
+
+  &.closed {
+    left: -100%;
+  }
+}
+
+.pitch-container {
+  display: none;
+
+  &.open {
+    left: 0;
+  }
+
+  &.ready {
+    left: 100%;
+  }
+
+  &.closed {
+    left: -100%;
+  }
+}
