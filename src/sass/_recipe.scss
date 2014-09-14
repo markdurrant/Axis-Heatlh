@@ -67,5 +67,11 @@
     opacity: 0.5;
     border-radius: 6px;
     width: 40px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }

@@ -19,9 +19,8 @@
 
 .homepage-header {
   @include clearfix;
-  z-index: 999;
 
-  // background: rgba( black, 0.35 );
+  z-index: 999;
   height: 5rem;
   padding-right: 0.5rem;
   border-bottom: 2px solid $primary;
