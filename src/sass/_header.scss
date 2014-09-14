@@ -15,8 +15,9 @@
   margin: 1rem 0;
 }
 
-.site-title {
-
+.site-title a {
+  color: $primary;
+  text-decoration: none;
 }
 
 .site-subtitle {
