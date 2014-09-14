@@ -30,11 +30,13 @@
 
 .ingredient-quantity {
   font-weight: 500;
+  color: $primary;
 }
 
 .ingredient-type {
   font-weight: 500;
-  border-bottom: 2px solid $ink;
+  border-bottom: 2px solid $primary;
+  color: $primary;
 }
 
 .gram::after {

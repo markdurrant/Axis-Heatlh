@@ -10,13 +10,10 @@
 //=======================================================
 // VARIABLES
 //=======================================================
-$paper:  hsl( 145, 65, 50 );
-$ink:    white;
+$paper: #fff;
+$ink: hsl( 211, 50, 20 );
 
-$paper:  white;
-$ink:    #004996;
-
-$primary: #004996;
+$primary: hsl( 211, 100, 29 );
 
 $chart-width: 600px;
 $chart-height: 500px;
@@ -56,6 +53,7 @@ h1, h2, h3, h4, h5, h6,
 b,
 strong {
   font-weight: 500;
+  color: $primary;
 }
 
 .wrap {

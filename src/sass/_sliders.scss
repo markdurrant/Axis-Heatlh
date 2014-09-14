@@ -3,7 +3,7 @@
 //=======================================================
 .axis-slider {
   -webkit-appearance: none;
-  background-color: mix( $ink, $paper, 75 );
+  background-color: mix( $primary, $paper, 75 );
   height: 4px;
   border-radius: 2px;
   outline: 0;
@@ -12,23 +12,34 @@
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: mix( $ink, $paper );
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    background: transparent;
     border: 0;
-    border: 4px solid $ink;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: mix( $primary, $paper );
+      width: 40px;
+      height: 40px;
+      top: 15px;
+      left: 15px;
+      border-radius: 50%;
+      border: 4px solid $primary;
+    }
   }
 }
 
 .x-axis-slider {
-  width: $chart-width - $axis-height - $slider-margin * 2;
-  margin-left: $slider-margin;
+  width: $chart-width - $axis-height;
+  // margin-left: $slider-margin;
   margin-top: 70px;
 }
 
 .y-axis-slider {
   margin-top: 62px;
-  width: $chart-height - $axis-height - $slider-margin * 2;
-  margin-left: $slider-margin;
+  width: $chart-height - $axis-height;
+  // margin-left: $slider-margin;
 }

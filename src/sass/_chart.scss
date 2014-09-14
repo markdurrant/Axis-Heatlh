@@ -28,7 +28,7 @@
     top: - $chart-inner-margin;
     bottom: - $chart-inner-margin;
     background-size: 33.3%;
-    background-image: linear-gradient( 90deg, rgba( $ink, 0.5 ) 1px, transparent 1px );
+    background-image: linear-gradient( 90deg, rgba( $primary, 0.5 ) 1px, transparent 1px );
   }
 
   &::after {
@@ -36,13 +36,13 @@
     left: - $chart-inner-margin;
     right: - $chart-inner-margin;
     background-size: 33.3333%;
-    background-image: linear-gradient( rgba( $ink, 0.5 ) 1px, transparent 1px );
+    background-image: linear-gradient( rgba( $primary, 0.5 ) 1px, transparent 1px );
   }
 }
 
 .dot {
-  background-color: $ink;
-  box-shadow: inset 0 0 0 3px $ink, inset 0 0 0 8px $paper;
+  background-color: $primary;
+  box-shadow: inset 0 0 0 3px $primary, inset 0 0 0 8px $paper;
   width: $dot-size;
   height: $dot-size;
   border-radius: 50%;
