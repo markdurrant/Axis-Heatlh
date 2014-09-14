@@ -17,7 +17,7 @@
 }
 
 .ingredient {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
 
   &::before {
@@ -45,4 +45,27 @@
 
 .ml::after {
   content: "ml";
+}
+
+.output-container {
+  @include clearfix;
+  margin-top: 1.5rem;
+
+  div {
+    float: left;
+    width: 80px;
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    color: $primary;
+    font-size: 0.8rem;
+  }
+
+  img {
+    opacity: 0.5;
+    border-radius: 6px;
+    width: 40px;
+  }
 }
